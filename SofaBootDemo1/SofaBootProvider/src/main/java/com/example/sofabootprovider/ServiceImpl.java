@@ -3,7 +3,7 @@ package com.example.sofabootprovider;
 import com.example.sofabootfacade.service.HelloWorldService;
 
 /**
- * 注入的方式发布服务
+ * xml的形式发布服务
  */
 public class ServiceImpl implements HelloWorldService {
 

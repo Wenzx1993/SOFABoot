@@ -9,6 +9,9 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
+/**
+ * 通过client的API发布服务
+ */
 @Component
 public class PublishClientFactory implements ClientFactoryAware {
 
