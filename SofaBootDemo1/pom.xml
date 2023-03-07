@@ -20,7 +20,8 @@
     <modules>
         <module>SofaBootProvider</module>
         <module>SofaBootConsumer</module>
-        <module>SofaBootFacada</module>
+        <module>SofaBootFacade</module>
+        <module>SofaBootRun</module>
     </modules>
     <dependencies>
         <dependency>
