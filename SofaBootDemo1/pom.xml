@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <!--开源版sofa依赖管理-->
     <parent>
         <groupId>com.alipay.sofa</groupId>
         <artifactId>sofaboot-dependencies</artifactId>
@@ -22,8 +23,10 @@
         <module>SofaBootConsumer</module>
         <module>SofaBootFacade</module>
         <module>SofaBootRun</module>
+        <module>SofaBootPre</module>
     </modules>
     <dependencies>
+        <!--健康检查-->
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>healthcheck-sofa-boot-starter</artifactId>
@@ -37,6 +40,36 @@
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>test-sofa-boot-starter</artifactId>
+        </dependency>
+
+        <!--rpc依赖-->
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>rpc-sofa-boot-starter</artifactId>
+        </dependency>
+
+        <!--模块化隔离-->
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>isle-sofa-boot-starter</artifactId>
+        </dependency>
+
+        <!--类隔离-->
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>sofa-ark-springboot-starter</artifactId>
+        </dependency>
+
+        <!--中间件版本-->
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>infra-sofa-boot-starter</artifactId>
+        </dependency>
+
+        <!--启动加速-->
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>runtime-sofa-boot-starter</artifactId>
         </dependency>
 
     </dependencies>

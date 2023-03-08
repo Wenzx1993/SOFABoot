@@ -6,13 +6,15 @@
             http://sofastack.io/schema/sofaboot   http://sofastack.io/schema/sofaboot.xsd"
        default-autowire="byName">
 
-    <bean id="serviceImpl" class="com.example.sofabootprovider.ServiceImpl">
+    <!--异步执行初始化-->
+    <bean id="serviceImpl" class="com.example.sofabootprovider.ServiceImpl" sofa:async-init="true">
         <property name="type" value="xml" />
     </bean>
 
     <sofa:service ref="serviceImpl" interface="com.example.sofabootfacade.service.HelloWorldService">
         <sofa:binding.jvm />
     </sofa:service>
+
 
 
 </beans>
