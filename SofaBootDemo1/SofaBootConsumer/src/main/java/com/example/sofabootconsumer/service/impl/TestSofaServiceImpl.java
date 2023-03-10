@@ -4,11 +4,14 @@ import com.alipay.sofa.runtime.api.annotation.SofaReference;
 import com.example.sofabootconsumer.service.TestSofaService;
 import com.example.sofabootfacade.service.HelloWorldService;
 import com.example.sofabootfacade.service.PreService;
-import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
-
-@Service
+/**
+ * @Service可以和xmL配置bean一起使用
+ *
+ * 这里bean的加载时机有问题
+ *
+ * init-method方式要求模块先于xxx执行，Require-Module，只能这样搭配
+ */
 public class TestSofaServiceImpl implements TestSofaService {
 
     @SofaReference
@@ -20,11 +23,10 @@ public class TestSofaServiceImpl implements TestSofaService {
     @SofaReference(uniqueId = "apiService")
     private HelloWorldService apiService;
 
-    @SofaReference(uniqueId = "preService")
+    @SofaReference
     private PreService preService;
 
     /*设置要求模块*/
-    @PostConstruct
     public void pre(){
         preService.pre();
     }
