@@ -3,3 +3,8 @@ spring:
     name: sofa-boot
 logging:
   path: ./logs
+com:
+  alipay:
+    sofa:
+      boot:
+        active-profiles: test

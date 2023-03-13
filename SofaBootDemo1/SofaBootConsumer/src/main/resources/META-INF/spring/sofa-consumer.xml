@@ -7,6 +7,6 @@
             http://sofastack.io/schema/sofaboot http://sofastack.io/schema/sofaboot.xsd"
        default-autowire="byName">
 
-    <bean id="testSofaService" class="com.example.sofabootconsumer.service.impl.TestSofaServiceImpl" init-method="pre" />
+    <bean id="testSofaService" class="com.example.sofabootconsumer.service.impl.TestSofaServiceImpl" init-method="pre" sofa:async-init="true"/>
 
 </beans>
